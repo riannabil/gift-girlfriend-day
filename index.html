@@ -37,11 +37,9 @@
         font-size: 20px;
       }
 
-      body {
-        background-image: url("https://i.ibb.co/2jQPHj5/paper-texture.jpg"); /* ganti dengan background kamu */
-        background-size: cover;
-        background-position: center;
-      }
+      html, body {
+  overflow: auto;
+}
 
       .fade {
         transition: opacity 0.5s ease;
@@ -477,7 +475,19 @@
                 </div>
                 <button
   onclick="backToMenu()"
-  style="position: fixed; bottom: 10px; left: 10px; z-index: 9999; background: pink; color: black;"
+  style="
+    position: fixed;
+    top: 20px;               /* Jarak dari atas */
+    left: 50%;               /* Posisi tengah secara horizontal */
+    transform: translateX(-50%); /* Geser ke kiri setengah lebar tombol */
+    z-index: 9999;
+    background: pink;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  "
 >
   Back
 </button>
@@ -609,5 +619,6 @@
   <script>
     document.body.classList.remove('not-loaded');
   </script>
+  
   </body>
 </html>
